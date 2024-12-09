@@ -19,7 +19,10 @@ const Navbar = () => {
           <Link href="/work" className="hover:text-gray-400">
             Our Impact
           </Link>
-          <div className="relative group">
+          <Link href="#services" className="hover:text-gray-400">
+            What we offer
+          </Link>
+          {/* <div className="relative group">
             <button className="hover:text-gray-400 focus:outline-none flex items-center">
             What we offer
               <svg
@@ -79,9 +82,9 @@ const Navbar = () => {
                 </Link>
               </div>
             </div>
-          </div>
-          <Link href="/blogs" className="hover:text-gray-400">
-          Knowledge Hub
+          </div> */}
+          <Link href="/Blogs" className="hover:text-gray-400">
+            Knowledge Hub
           </Link>
         </nav>
 
@@ -99,7 +102,7 @@ const Navbar = () => {
 
         {/* Desktop CTA */}
         <div className="hidden md:flex items-center space-x-4 px-10">
-          <Link href="/aboutus" className="hover:text-gray-400">
+          <Link href="/About" className="hover:text-gray-400">
             About Us
           </Link>
           <button className="bg-purple-600 text-white py-2 px-4 rounded hover:bg-purple-700">
@@ -133,7 +136,7 @@ const Navbar = () => {
           </Link>
           <div className="relative">
             <button className="w-full text-left py-2 flex justify-between items-center">
-            What we offer
+              What we offer
               <svg
                 className="h-4 w-4 transition-transform duration-200"
                 xmlns="http://www.w3.org/2000/svg"
@@ -168,7 +171,7 @@ const Navbar = () => {
             </div>
           </div>
           <Link href="/blogs" className="block py-2">
-          Knowledge Hub
+            Knowledge Hub
           </Link>
           <Link href="/aboutus" className="block py-2">
             About Us

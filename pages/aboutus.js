@@ -1,7 +1,6 @@
 import React from "react";
 import Footer from "./components/subC/Footer";
-import ThreePage from "./components/subC/ThreePage";
-import pageInfo from "../resources/pageInfo";
+
 import Image from "next/image";
 
 const AboutUs = () => {
@@ -30,10 +29,10 @@ const AboutUs = () => {
   return (
     <section className="overflow-x-hidden">
       <div>
-        <ThreePage
+        {/* <ThreePage
           title={pageInfo[8].title}
           description={pageInfo[8].description}
-        />
+        /> */}
       </div>
       <div className="text-center py-16 md:py-24 lg:py-32">
         <h2 className="text-2xl md:text-3xl font-semibold mb-10 md:mb-16 lg:mb-20">

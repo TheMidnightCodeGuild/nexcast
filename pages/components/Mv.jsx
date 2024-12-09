@@ -5,34 +5,35 @@ const PromisesSection = () => {
   const promises = [
     {
       title: "Clear Communication and Reporting",
-      description: "Regular updates and transparent reporting on campaign performance",
-      image: "/images/communication.webp"
+      description:
+        "Regular updates and transparent reporting on campaign performance",
+      image: "/images/1.png",
     },
     {
-      title: "Tailored Strategies", 
+      title: "Tailored Strategies",
       description: "Customized solutions aligned with your business goals",
-      image: "/images/strategy.webp"
+      image: "/images/2.png",
     },
     {
       title: "Guaranteed Views",
       description: "Proven track record of delivering targeted audience reach",
-      image: "/images/views.webp"
+      image: "/images/3.png",
     },
     {
       title: "High Production Value",
       description: "Premium quality content that elevates your brand",
-      image: "/images/production.webp"
+      image: "/images/4.png",
     },
     {
       title: "Customer Satisfaction",
       description: "Committed to exceeding client expectations",
-      image: "/images/satisfaction.webp"
+      image: "/images/5.png",
     },
     {
       title: "Long Term Partnership",
       description: "Building lasting relationships through consistent results",
-      image: "/images/partnership.webp"
-    }
+      image: "/images/6.png",
+    },
   ];
 
   return (
@@ -43,17 +44,16 @@ const PromisesSection = () => {
           What Sets Us Apart
         </h2>
         <p className="mt-4 text-base md:text-[20px] font-['Inter'] text-gray-600">
-          We don't just make promises, we deliver results
+          We don&apos;t just make promises, we deliver results
         </p>
       </div>
 
       {/* Promises Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl w-full">
         {promises.map((promise, index) => (
-          <div 
+          <div
             key={index}
-            className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300"
-          >
+            className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300">
             <div className="relative w-full h-48 mb-4">
               <Image
                 src={promise.image}
@@ -66,9 +66,7 @@ const PromisesSection = () => {
             <h3 className="text-xl font-bold text-gray-900 mb-2">
               {promise.title}
             </h3>
-            <p className="text-gray-600">
-              {promise.description}
-            </p>
+            <p className="text-gray-600">{promise.description}</p>
           </div>
         ))}
       </div>

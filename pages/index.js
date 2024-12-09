@@ -12,7 +12,10 @@ const Index = () => {
       <Home />
       {/* <CardHoverEffectDemo /> */}
       <Mv />
-      <FiveServices />
+      <div id="services">
+        <FiveServices />
+      </div>
+
       <OurResults />
 
       <Footer />
