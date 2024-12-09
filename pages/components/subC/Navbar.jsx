@@ -17,11 +17,11 @@ const Navbar = () => {
             Home
           </Link>
           <Link href="/work" className="hover:text-gray-400">
-            Work
+            Our Impact
           </Link>
           <div className="relative group">
             <button className="hover:text-gray-400 focus:outline-none flex items-center">
-              Services
+            What we offer
               <svg
                 className="ml-1 h-4 w-4 transition-transform duration-200 group-hover:rotate-180"
                 xmlns="http://www.w3.org/2000/svg"
@@ -81,7 +81,7 @@ const Navbar = () => {
             </div>
           </div>
           <Link href="/blogs" className="hover:text-gray-400">
-            Blogs
+          Knowledge Hub
           </Link>
         </nav>
 
@@ -129,11 +129,11 @@ const Navbar = () => {
       {showMobileMenu && (
         <div className="md:hidden bg-black text-white p-4">
           <Link href="/work" className="block py-2">
-            Work
+            Our Impact
           </Link>
           <div className="relative">
             <button className="w-full text-left py-2 flex justify-between items-center">
-              Services
+            What we offer
               <svg
                 className="h-4 w-4 transition-transform duration-200"
                 xmlns="http://www.w3.org/2000/svg"
@@ -168,7 +168,7 @@ const Navbar = () => {
             </div>
           </div>
           <Link href="/blogs" className="block py-2">
-            Blogs
+          Knowledge Hub
           </Link>
           <Link href="/aboutus" className="block py-2">
             About Us

@@ -10,10 +10,10 @@ const Index = () => {
   return (
     <div className="overflow-x-hidden">
       <Home />
-      <CardHoverEffectDemo />
+      {/* <CardHoverEffectDemo /> */}
       <Mv />
-      <OurResults />
       <FiveServices />
+      <OurResults />
 
       <Footer />
     </div>

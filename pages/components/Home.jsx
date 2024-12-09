@@ -46,15 +46,13 @@ const PitchhmeLanding = () => {
         <main className="px-4 md:px-14 flex-grow flex flex-col justify-end">
           <div className="mb-14">
             <div className=" text-white text-sm mb-4">
-              Marketing agency studio
-            </div>
+Creative content marketing solutions            </div>
             <h1 className="text-2xl md:text-[50px] font-bold leading-tight tracking-[-2%] mb-6">
-              Don&apos;t let marketing be the reason your business fails.
+            They Post. We Perform. That&apos;s the Difference!
             </h1>
             <p className="text-base md:text-base text-gray-400">
-              Startups, SMEs, and large enterprises come to{" "}
-              <br className="hidden md:inline" /> Pitchhme to market themselves
-              better and faster.
+            Craft smarter, faster, and measurable marketing strategies{" "}
+              <br className="hidden md:inline" /> that bring next-level results — truly badhiya.
             </p>
           </div>
         </main>
