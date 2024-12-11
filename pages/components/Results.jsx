@@ -66,28 +66,23 @@ const OurResults = () => {
         width={1000}
         height={1000}
       />
-      <div className="grid grid-cols-2 md:grid-cols-6 gap-4 md:gap-6 justify-center items-center mt-6 md:mt-8 max-w-5xl mx-auto text-center">
+      <div className="grid grid-cols-2 md:grid-cols-7 gap-4 md:gap-8 place-items-center mt-6 md:mt-8 max-w-6xl mx-auto">
         {[
-          { src: "/svgs/netflix.svg", alt: "Netflix logo" },
-          { src: "/svgs/marvel.svg", alt: "Marvel logo" },
-          { src: "/svgs/amazon.svg", alt: "Amazon miniTV logo" },
-          { src: "/svgs/sony.svg", alt: "Sony Liv logo" },
-          { src: "/svgs/realme.svg", alt: "Realme logo" },
-          { src: "/svgs/tcf.svg", alt: "TVF logo" },
-          { src: "/svgs/netflix.svg", alt: "Netflix logo" },
-          { src: "/svgs/marvel.svg", alt: "Marvel logo" },
-          { src: "/svgs/amazon.svg", alt: "Amazon miniTV logo" },
-          { src: "/svgs/sony.svg", alt: "Sony Liv logo" },
-          { src: "/svgs/realme.svg", alt: "Realme logo" },
-          { src: "/svgs/tcf.svg", alt: "TVF logo" },
+          { src: "/images/wingsofcomfort.png", alt: "Wingsofcomfort logo" },
+          { src: "/images/applause.png", alt: "Applause logo" },
+          { src: "/images/toyota.png", alt: "Toyota logo" },
+          { src: "/images/acceptance.png", alt: "Acceptance logo" },
+          { src: "/images/dps.jpeg", alt: "DPS logo" },
+          { src: "/images/twacha.png", alt: "TVF logo" },
+          { src: "/images/sonyliv.png", alt: "Sony Liv logo" },
         ].map((logo, index) => (
-          <div key={index} className="flex justify-center items-center">
+          <div key={index} className="flex items-center justify-center w-full">
             <Image
               src={logo.src}
               alt={logo.alt}
-              width={100}
-              height={50}
-              className="w-20 md:w-24 h-auto"
+              width={120}
+              height={100}
+              className="w-20 md:w-24 h-auto object-contain"
             />
           </div>
         ))}

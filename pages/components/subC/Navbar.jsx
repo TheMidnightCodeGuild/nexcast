@@ -4,13 +4,16 @@ import Link from "next/link";
 
 const Navbar = () => {
   const [showMobileMenu, setShowMobileMenu] = useState(false);
+  const [showServicesDropdown, setShowServicesDropdown] = useState(false);
 
   const toggleMobileMenu = () => setShowMobileMenu(!showMobileMenu);
+  const toggleServicesDropdown = () =>
+    setShowServicesDropdown(!showServicesDropdown);
 
   return (
     <>
       {/* Navigation Section */}
-      <header className="flex justify-between items-center p-6">
+      <header className="flex justify-between items-center p-6 ">
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center space-x-6 px-10">
           <Link href="/" className="hover:text-gray-400">
@@ -83,9 +86,6 @@ const Navbar = () => {
               </div>
             </div>
           </div> */}
-          <Link href="/Blogs" className="hover:text-gray-400">
-            Knowledge Hub
-          </Link>
         </nav>
 
         {/* Logo */}
@@ -102,83 +102,69 @@ const Navbar = () => {
 
         {/* Desktop CTA */}
         <div className="hidden md:flex items-center space-x-4 px-10">
-          <Link href="/About" className="hover:text-gray-400">
-            About Us
-          </Link>
-          <button className="bg-purple-600 text-white py-2 px-4 rounded hover:bg-purple-700">
+          <Link
+            href="/contact"
+            className="bg-purple-600 text-white py-2 px-4 rounded hover:bg-purple-700">
             Book intro call — it&apos;s free
-          </button>
+          </Link>
         </div>
 
         {/* Mobile Menu Button */}
-        <button className="md:hidden text-white" onClick={toggleMobileMenu}>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            className="h-6 w-6"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor">
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M4 6h16M4 12h16m-7 6h7"
-            />
-          </svg>
+        <button
+          className="md:hidden text-black"
+          onClick={toggleMobileMenu}
+          aria-label="Toggle menu">
+          {showMobileMenu ? (
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor">
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M6 18L18 6M6 6l12 12"
+              />
+            </svg>
+          ) : (
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor">
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M4 6h16M4 12h16m-7 6h7"
+              />
+            </svg>
+          )}
         </button>
       </header>
 
       {/* Mobile Menu */}
       {showMobileMenu && (
-        <div className="md:hidden bg-black text-white p-4">
-          <Link href="/work" className="block py-2">
+        <div className="md:hidden bg-white text-black p-4 shadow-lg fixed top-[88px] left-0 right-0 h-screen z-50">
+          <Link
+            href="/"
+            className="block py-3 border-b border-gray-200 hover:text-purple-600">
+            Home
+          </Link>
+          <Link
+            href="/work"
+            className="block py-3 border-b border-gray-200 hover:text-purple-600">
             Our Impact
           </Link>
-          <div className="relative">
-            <button className="w-full text-left py-2 flex justify-between items-center">
-              What we offer
-              <svg
-                className="h-4 w-4 transition-transform duration-200"
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 20 20"
-                fill="currentColor">
-                <path
-                  fillRule="evenodd"
-                  d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                  clipRule="evenodd"
-                />
-              </svg>
-            </button>
-            <div className="pl-4">
-              <Link href="/socialMedia" className="block py-2">
-                Social Media
-              </Link>
-              <Link href="/influencerMarketing" className="block py-2">
-                Influencer Marketing
-              </Link>
-              <Link href="/paidSocial" className="block py-2">
-                Paid Social
-              </Link>
-              <Link href="/paidSearch" className="block py-2">
-                Paid Search
-              </Link>
-              <Link href="/communityManagement" className="block py-2">
-                Community Management
-              </Link>
-              <Link href="/brandingCreative" className="block py-2">
-                Branding & Creative
-              </Link>
-            </div>
-          </div>
-          <Link href="/blogs" className="block py-2">
-            Knowledge Hub
-          </Link>
-          <Link href="/aboutus" className="block py-2">
-            About Us
-          </Link>
-          <button className="bg-purple-600 text-white py-2 px-4 rounded hover:bg-purple-700 mt-2 w-full">
+
+          <Link
+            href="/contact"
+            className="block mt-4 bg-purple-600 text-white py-3 px-4 rounded text-center hover:bg-purple-700 transition-colors">
             Book intro call — it&apos;s free
-          </button>
+          </Link>
         </div>
       )}
     </>

@@ -108,7 +108,7 @@ const FiveServices = () => {
           {industries.map((industry, index) => (
             <div
               key={index}
-              className="text-center p-4 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
+              className="text-center mx-auto p-4 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
               <p className="text-sm md:text-base font-semibold text-gray-700">
                 {industry}
               </p>

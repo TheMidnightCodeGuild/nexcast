@@ -6,35 +6,52 @@ import Footer from "./components/subC/Footer";
 const Work = () => {
   const projects = [
     {
-      title: "Brand Evolution Campaign",
-      client: "TechCorp Solutions",
-      category: "Brand Strategy",
-      image: "/images/work1.jpg",
+      title: "Scam 2003",
+      client: "SonyLIV",
+      category: "Social Media Campaign",
+      image: "/images/scam2003.avif",
       description:
-        "Complete brand refresh and digital marketing strategy that increased engagement by 150%",
-      results: ["150% increase in engagement", "200% ROI", "1M+ impressions"],
-    },
-    {
-      title: "Social Media Growth",
-      client: "EcoFriendly Co",
-      category: "Social Media Marketing",
-      image: "/images/work2.jpg",
-      description:
-        "Organic social media strategy focused on community building and brand awareness",
+        "Comprehensive digital marketing campaign for the launch of Scam 2003 web series, driving massive viewer engagement",
       results: [
-        "100k+ new followers",
-        "45% engagement rate",
-        "300% increase in leads",
+        "50M+ social media impressions",
+        "2M+ website visits",
+        "500K+ new subscribers",
       ],
     },
     {
-      title: "Performance Marketing",
-      client: "FitLife Gear",
-      category: "Paid Advertising",
-      image: "/images/work3.jpg",
+      title: "Just Mughal Things",
+      client: "Historical Entertainment",
+      category: "Content Marketing",
+      image: "/images/mughal.avif",
       description:
-        "Data-driven paid social campaign optimized for conversions and ROAS",
-      results: ["3x ROAS", "50k+ conversions", "40% lower CPA"],
+        "Viral social media content strategy celebrating Mughal history and culture through engaging storytelling",
+      results: [
+        "1M+ followers growth",
+        "85% engagement rate",
+        "Featured in major publications",
+      ],
+    },
+    {
+      title: "Undekhi",
+      client: "SonyLIV",
+      category: "Launch Campaign",
+      image: "/images/undekhi.avif",
+      description:
+        "Multi-platform marketing campaign for crime thriller series Undekhi focusing on suspense and intrigue",
+      results: ["10M+ reach", "3M+ streams", "Trending #1 on launch"],
+    },
+    {
+      title: "Hack Crimes Online",
+      client: "Cyber Security Awareness",
+      category: "Educational Campaign",
+      image: "/images/crime.jpg",
+      description:
+        "Digital awareness campaign about cyber security and online crimes prevention",
+      results: [
+        "2M+ video views",
+        "100K+ app downloads",
+        "30% rise in awareness",
+      ],
     },
   ];
 
@@ -43,38 +60,37 @@ const Work = () => {
       <Navbar />
       <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
-        <div className="bg-gradient-to-r from-purple-600 to-blue-600 text-white py-20">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">Our Work</h1>
-            <p className="text-xl max-w-3xl mx-auto">
-              Delivering exceptional results through strategic digital marketing
-              solutions
-            </p>
-          </div>
-        </div>
 
         {/* Projects Grid */}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
             {projects.map((project, index) => (
               <div
                 key={index}
-                className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
-                <div className="relative h-64">
+                className="bg-white rounded-xl shadow-lg overflow-hidden ">
+                <div className="relative h-72 overflow-hidden">
                   <Image
                     src={project.image}
                     alt={project.title}
                     layout="fill"
                     objectFit="cover"
+                    className="object-cover"
                   />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-500">
+                    <div className="absolute bottom-4 left-4 text-white">
+                      <p className="text-sm font-semibold">
+                        {project.category}
+                      </p>
+                    </div>
+                  </div>
                 </div>
-                <div className="p-6">
+                <div className="p-6 transform transition-transform duration-500">
                   <div className="flex items-center mb-4">
                     <span className="text-sm text-purple-600 font-semibold">
                       {project.category}
                     </span>
                   </div>
-                  <h2 className="text-xl font-bold mb-2 text-gray-900">
+                  <h2 className="text-2xl font-bold mb-2 text-gray-900 hover:text-purple-600 transition-colors duration-300">
                     {project.title}
                   </h2>
                   <h3 className="text-lg text-gray-700 mb-3">
@@ -87,7 +103,11 @@ const Work = () => {
                     </h4>
                     <ul className="list-disc list-inside text-gray-600">
                       {project.results.map((result, idx) => (
-                        <li key={idx}>{result}</li>
+                        <li
+                          key={idx}
+                          className="hover:text-purple-600 transition-colors duration-300">
+                          {result}
+                        </li>
                       ))}
                     </ul>
                   </div>
