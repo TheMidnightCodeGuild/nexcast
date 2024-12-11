@@ -1,43 +1,17 @@
-import React, { useRef, useEffect } from "react";
+import React from "react";
 import Navbar from "./subC/Navbar";
-import localFont from "next/font/local";
-
-const satoshi = localFont({
-  src: [
-    {
-      path: "../../public/fonts/Satoshi-Regular.woff2",
-      weight: "400",
-      style: "normal",
-    },
-    {
-      path: "../../public/fonts/Satoshi-Bold.woff2",
-      weight: "700",
-      style: "normal",
-    },
-  ],
-  variable: "--font-satoshi",
-});
+import Image from "next/image";
 
 const PitchhmeLanding = () => {
-  const videoRef = useRef(null);
-
-  useEffect(() => {
-    if (videoRef.current) {
-      videoRef.current.play();
-    }
-  }, []);
-
   return (
     <div
-      className={`${satoshi.variable} bg-black text-white min-h-screen flex flex-col relative overflow-hidden`}>
-      <video
-        ref={videoRef}
-        className="absolute top-0 left-0 w-full h-full object-cover scale-100 sm:scale-0"
-        src="/images/video1.mp4"
-        autoPlay
-        loop
-        muted
-        playsInline
+      className={` bg-black text-white min-h-screen flex flex-col relative overflow-hidden`}>
+      <Image
+        src="/images/logo.png"
+        alt="image"
+        width={800}
+        height={800}
+        className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 sm:w-[800px] sm:h-[800px] w-[400px] h-[400px] object-cover"
       />
       <div className="flex flex-col h-screen relative z-10">
         <Navbar />
