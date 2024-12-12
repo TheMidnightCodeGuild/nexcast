@@ -1,6 +1,10 @@
 import React from "react";
 import Image from "next/image";
 import CountUp from "react-countup";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay } from "swiper/modules";
+import "swiper/css";
+
 const OurResults = () => {
   return (
     <section className="text-center py-10 md:py-20 px-4 md:px-0">
@@ -66,26 +70,49 @@ const OurResults = () => {
         width={1000}
         height={1000}
       />
-      <div className="grid grid-cols-2 md:grid-cols-7 gap-4 md:gap-8 place-items-center mt-6 md:mt-8 max-w-6xl mx-auto">
-        {[
-          { src: "/images/wingsofcomfort.png", alt: "Wingsofcomfort logo" },
-          { src: "/images/applause.png", alt: "Applause logo" },
-          { src: "/images/toyota.png", alt: "Toyota logo" },
-          { src: "/images/acceptance.png", alt: "Acceptance logo" },
-          { src: "/images/dps.jpeg", alt: "DPS logo" },
-          { src: "/images/twacha.png", alt: "TVF logo" },
-          { src: "/images/sonyliv.png", alt: "Sony Liv logo" },
-        ].map((logo, index) => (
-          <div key={index} className="flex items-center justify-center w-full">
-            <Image
-              src={logo.src}
-              alt={logo.alt}
-              width={120}
-              height={100}
-              className="w-20 md:w-24 h-auto object-contain"
-            />
-          </div>
-        ))}
+      <div className="max-w-6xl mx-auto mt-6 md:mt-8">
+        <Swiper
+          modules={[Autoplay]}
+          spaceBetween={30}
+          slidesPerView={1}
+          autoplay={{
+            delay: 2500,
+            disableOnInteraction: false,
+          }}
+          breakpoints={{
+            640: {
+              slidesPerView: 2,
+            },
+            768: {
+              slidesPerView: 3,
+            },
+            1024: {
+              slidesPerView: 4,
+            },
+          }}
+          className="py-4">
+          {[
+            { src: "/images/wingsofcomfort.png", alt: "Wingsofcomfort logo" },
+            { src: "/images/applause.png", alt: "Applause logo" },
+            { src: "/images/toyota.png", alt: "Toyota logo" },
+            { src: "/images/acceptance.png", alt: "Acceptance logo" },
+            { src: "/images/dps.jpeg", alt: "DPS logo" },
+            { src: "/images/twacha.png", alt: "TVF logo" },
+            { src: "/images/sonyliv.png", alt: "Sony Liv logo" },
+          ].map((logo, index) => (
+            <SwiperSlide key={index}>
+              <div className="flex items-center justify-center w-full p-4">
+                <Image
+                  src={logo.src}
+                  alt={logo.alt}
+                  width={180}
+                  height={150}
+                  className="w-32 md:w-40 h-auto object-contain hover:scale-110 transition-transform duration-300"
+                />
+              </div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
       </div>
       <Image
         src="/svgs/line1.svg"

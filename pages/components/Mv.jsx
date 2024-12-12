@@ -37,7 +37,7 @@ const PromisesSection = () => {
   ];
 
   return (
-    <div className="flex flex-col items-center justify-center w-full min-h-screen py-16 md:py-32 px-4 md:px-8 bg-gray-50">
+    <div className="flex flex-col items-center justify-center w-full min-h-screen py-16 md:py-16 px-4 md:px-8 bg-gray-50">
       {/* Promises Heading */}
       <div className="text-center mb-12 md:mb-16">
         <h2 className="text-3xl md:text-[48px] font-bold mt-2 font-['Satoshi_Variable'] leading-tight tracking-[-0.02em]">
